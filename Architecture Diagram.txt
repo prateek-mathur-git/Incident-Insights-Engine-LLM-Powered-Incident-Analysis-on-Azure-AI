@@ -1,0 +1,56 @@
+		  +-----------------------------+
+                  | Incident Source |
+                  | (JSON / NDJSON dataset) |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Azure Blob Storage |
+                  | (stores raw incident data) |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Azure AI Search Index |
+                  | - Index (id, description) |
+                  | - Data ingestion pipeline |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Azure AI Search Skillset |
+                  | - LLM Enrichment Skill |
+                  | - Text analytics (optional) |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Azure OpenAI / GPT Model |
+                  | (Generates structured JSON) |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Enriched Search Index Output |
+                  | - probable_cause |
+                  | - recommended_actions |
+                  | - severity_inference |
+                  | - category |
+                  | - patterns / similarities |
+                  +--------------+--------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | Retrieval & Dashboards |
+                  | - Azure AI Studio Chat |
+                  | - Kibana/Grafana (optional) |
+                  | - Power BI (optional) |
+                  +-----------------------------+
+                                 |
+                                 v
+                  +-----------------------------+
+                  | (Optional) Automation Layer |
+                  | - ServiceNow update |
+                  | - Auto-runbook invocation |
+                  | - Webhook notifications |
+                  +-----------------------------+
