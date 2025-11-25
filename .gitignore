@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+
+# Azure config / Secrets
+*.azure/
+azure_credentials.json
+*connection_string*
+*.key
+*.pem
+
+# VS Code
+.vscode/
+.settings/
+
+# Mac OS metadata
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache directories
+.cache/
+*.cache/
+
+# Data files that shouldn’t be committed
+*.csv
+*.ndjson
+data/
+dataset/
+raw_data/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Local notebooks
+local_notebooks/
+temp/
+tmp/
+
+# Environment variables
+.env
+.env.*
+secrets.json
+
+# Azure AI Search temp files
+index_config/
+skillset_temp/
+output/
